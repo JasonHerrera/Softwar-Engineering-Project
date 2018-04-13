@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Route, NavLink, BrowserRouter } from 'react-router-dom';
+import {Route, BrowserRouter } from 'react-router-dom';
 
 import Geolocation from './Geolocation/Geolocation';
 import SubmitPost from './SubmitPost/SubmitPost';
@@ -57,18 +57,18 @@ class App extends Component {
         return (
         <BrowserRouter>
         <div className="App">
-            <ul class="nav justify-content-center">
-                <li class="nav-item">
-                    <a class="nav-link active" href="/">Home</a>
+            <ul className="nav justify-content-center">
+                <li className="nav-item">
+                    <a className="nav-link active" href="/">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/profile">Profile</a>
+                <li className="nav-item">
+                    <a className="nav-link" href="/profile">Profile</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/posts">Feed</a>
+                <li className="nav-item">
+                    <a className="nav-link" href="/posts">Feed</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/submit">Submit</a>
+                <li className="nav-item">
+                    <a className="nav-link" href="/submit">Submit</a>
                 </li>
             </ul>
 

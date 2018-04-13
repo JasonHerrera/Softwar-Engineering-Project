@@ -65,23 +65,23 @@ class SubmitPost extends Component {
                 {process.env.REACT_APP_ENV}
                     <p>Submit Post</p>
                         <form onSubmit={this.handlePostSubmission}>
-                            <div class="row">
-                                <div class="col">
-                                    <label for="inputPostTitle">Post Title</label>
-                                    <input type="text" class="form-control" id="inputPostTitle" value={this.state.title} onChange={this.handleChange} placeholder="Lost Courgey in Area!"/>
-                                    <small id="titleHelp" class="form-text text-muted">Be descriptive and concise when entering a title.</small>
+                            <div className="row">
+                                <div className="col">
+                                    <label htmlFor="inputPostTitle">Post Title</label>
+                                    <input type="text" className="form-control" id="inputPostTitle" value={this.state.title} onChange={this.handleChange} placeholder="Lost Courgey in Area!"/>
+                                    <small id="titleHelp" className="form-text text-muted">Be descriptive and concise when entering a title.</small>
                                 </div>
-                                <div class="col">
-                                    <label for="inputPostLink">Post Link</label>
-                                    <input type="text" class="form-control" id="inputPostLink" value={this.state.pictureLink} onChange={this.handleChange} placeholder="https://imgur.com/..."/>
-                                    <small id="titleHelp" class="form-text text-muted">You can host images for free at <a href="https://imgur.com/">Imgur</a></small>
+                                <div className="col">
+                                    <label htmlFor="inputPostLink">Post Link</label>
+                                    <input type="text" className="form-control" id="inputPostLink" value={this.state.pictureLink} onChange={this.handleChange} placeholder="https://imgur.com/..."/>
+                                    <small id="titleHelp" className="form-text text-muted">You can host images for free at <a href="https://imgur.com/">Imgur</a></small>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label for="inputPostDescription">Description</label>
-                                <textarea type="password" class="form-control" id="inputPostDescription" value={this.state.description} onChange={this.handleChange} placeholder="Post Description"/>
+                            <div className="form-group">
+                                <label htmlFor="inputPostDescription">Description</label>
+                                <textarea type="password" className="form-control" id="inputPostDescription" value={this.state.description} onChange={this.handleChange} placeholder="Post Description"/>
                             </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" className="btn btn-primary">Submit</button>
                             {this.state.response}
                         </form>
                 </div>
