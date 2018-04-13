@@ -61,17 +61,29 @@ class SubmitPost extends Component {
 
     // TODO: edit this to generate multiple cards within the div
     render() {
-        return (<div>
+        return (<div className="container Submit-Container"> 
                 {process.env.REACT_APP_ENV}
                     <p>Submit Post</p>
                         <form onSubmit={this.handlePostSubmission}>
-                            <input type="text" value={this.state.title} onChange={this.handleChange} name="title" placeholder="Post Title" required=""/>
-                            <input type="text" value={this.state.description} onChange={this.handleChange} name="description" placeholder="Animal Description" required=""/>
-                            <input type="text" value={this.state.pictureLink} onChange={this.handleChange} name="pictureLink" placeholder="Picture Link" required=""/>
-                            <input type="submit" value="SUBMIT"/>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="inputPostTitle">Post Title</label>
+                                    <input type="text" class="form-control" id="inputPostTitle" value={this.state.title} onChange={this.handleChange} placeholder="Lost Courgey in Area!"/>
+                                    <small id="titleHelp" class="form-text text-muted">Be descriptive and concise when entering a title.</small>
+                                </div>
+                                <div class="col">
+                                    <label for="inputPostLink">Post Link</label>
+                                    <input type="text" class="form-control" id="inputPostLink" value={this.state.pictureLink} onChange={this.handleChange} placeholder="https://imgur.com/..."/>
+                                    <small id="titleHelp" class="form-text text-muted">You can host images for free at <a href="https://imgur.com/">Imgur</a></small>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPostDescription">Description</label>
+                                <textarea type="password" class="form-control" id="inputPostDescription" value={this.state.description} onChange={this.handleChange} placeholder="Post Description"/>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
                             {this.state.response}
                         </form>
-                
                 </div>
         );
     }

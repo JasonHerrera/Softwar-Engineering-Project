@@ -1,0 +1,21 @@
+.SubmitPost {
+    /*border: 1px solid black;
+    background-color: lightblue;
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px;*/
+
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+.Feed-Card-Container {
+    padding-top: 10px;
+    width: 60rem; 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center
+}
