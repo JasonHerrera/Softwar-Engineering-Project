@@ -98,11 +98,11 @@ class App extends Component {
     return (
     <BrowserRouter>
      <div className="App">
-      <div>
-        <NavLink to="/">Home</NavLink> | 
-        <NavLink to="/profile">Profile</NavLink> | 
-        <NavLink to="/posts">Feed</NavLink> | 
-        <NavLink to="/post/1">Post</NavLink> | 
+      <div className="navbar">
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/profile">Profile</NavLink>
+        <NavLink to="/posts">Feed</NavLink>
+        <NavLink to="/post/1">Post</NavLink>
         <NavLink to="/submit">Submit</NavLink>
       </div>
 

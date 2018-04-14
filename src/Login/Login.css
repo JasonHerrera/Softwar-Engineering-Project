@@ -4,7 +4,6 @@ p {
 
 .container {
 	display: inline-flex;
-	background-color: white;
 	width: 35em;
 	margin: auto;
 	padding-top: 3em;
@@ -14,7 +13,8 @@ p {
 
 .register {
 	background-color: white;
-	border: .5px solid gray;
+	border-radius: 5px;
+	border: .5px solid #e6e6e6;
 	width: 15em;
 	margin: auto;
 	padding-top: 3em;
@@ -22,8 +22,9 @@ p {
 }
 
 .login {
+	border-radius: 5px;
 	background-color: white;
-	border: .5px solid gray;
+	border: .5px solid #e6e6e6;
 	width: 15em;
 	margin: auto;
 	padding-top: 3em;

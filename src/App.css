@@ -26,3 +26,22 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.navbar {
+  height: 2.5em;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #e84225, #890680);
+  display: inline-block;
+  width: 100%;
+}
+
+.navbar a {
+  margin-left: 10px;
+  margin-right: 10px;
+  line-height: 2.5em; /*should match .navbar height*/
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+}
