@@ -96,8 +96,8 @@ class Login extends Component {
 
   render() {
     return (
-      <div>
-        <div>
+      <div className="container">
+        <div className="register">
           <p> Register </p>
           <form onSubmit={this.handleRegister}>
             <input type="text" value={this.state.email} onChange={this.handleChange} name="email" placeholder="E-mail" required=""/>
@@ -109,7 +109,7 @@ class Login extends Component {
         </div>
 
         {!this.props.loggedIn && 
-        <div className="App">
+        <div className="login">
           <p> Log in </p>
           <form onSubmit={this.handleLogin}>
             <input type="text" value={this.state.logemail} onChange={this.handleChange} name="logemail" placeholder="E-mail" required=""/>

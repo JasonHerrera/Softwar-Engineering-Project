@@ -2,16 +2,42 @@ p {
 	font-family: Ubuntu, arial;
 }
 
-.App {
-	background-color: #222;
-	width: 50%;
+.container {
+	display: inline-flex;
+	background-color: white;
+	width: 35em;
 	margin: auto;
-	margin-top: 3em;
+	padding-top: 3em;
+	padding-bottom: 3em;
+}
+
+
+.register {
+	background-color: white;
+	border: .5px solid gray;
+	width: 15em;
+	margin: auto;
+	padding-top: 3em;
+	padding-bottom: 3em;
+}
+
+.login {
+	background-color: white;
+	border: .5px solid gray;
+	width: 15em;
+	margin: auto;
+	padding-top: 3em;
+	padding-bottom: 3em;
 }
 
 .App input {
+	margin-bottom: 5px;
 	display: table-cell;
-    vertical-align: middle;
     height: 50px;
-    border: 1px solid black;
+    border: 1px solid #d1d1d1;
+    margin-left: 5px;
+}
+
+input {
+	padding-left: 1em;
 }
