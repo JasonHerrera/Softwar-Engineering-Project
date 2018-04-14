@@ -11,6 +11,8 @@ import Feed from './Feed/Feed';
 
 import './App.css';
 
+import logo from './test-logo.png';
+
 const baseURL = (process.env.REACT_APP_ENV === "production" ? 'https://swe-server.herokuapp.com' : 'http://localhost:5000')
 
 class App extends Component {
@@ -98,6 +100,7 @@ class App extends Component {
     return (         
     <BrowserRouter>
       <div className="App">
+        <img src={logo} className="logo" />
         <div className="navbar">
           <NavLink to="/">Home</NavLink>
           <NavLink to="/profile">Profile</NavLink>
