@@ -41,10 +41,10 @@ class Feed extends Component {
                         <div className="right">
                             <h3 className="card-title"> {post.title} </h3>
                             <p className="card-text"> {post.description} </p>
-                            <p> ~ {post.creator} </p>
-                            <p> {post.latitude} </p>
-                            <p> {post.longitude} </p>
-                            <p> {post.updated} </p>
+                            <p className="creator"> ~ {post.creator} </p>
+                            <br/>
+                            <p> {post.longitude} {post.latitude} </p>
+                            <p> {post.updated.toLocaleString()} </p>
                         </div>
                     </div>
                 </div>
