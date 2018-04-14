@@ -70,16 +70,14 @@ class SubmitPost extends Component {
 
     // TODO: edit this to generate multiple cards within the div
     render() {
-        console.log(this.props);
         if(!this.props.loggedIn) {
             return( 
-                <div> 
+                <div className="container" style={{justifyContent: `center`}}> 
                     Please log in in order to submit a post
                 </div>
                 )
         }
         return (<div className="container Submit-Container"> 
-        {process.env.REACT_APP_ENV}
             <h1>Submit Post</h1>
             <br/>
                 <form onSubmit={this.handlePostSubmission}>

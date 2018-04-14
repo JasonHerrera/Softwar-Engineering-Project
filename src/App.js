@@ -105,7 +105,6 @@ class App extends Component {
           <NavLink to="/">Home</NavLink>
           <NavLink to="/profile">Profile</NavLink>
           <NavLink to="/posts">Feed</NavLink>
-          <NavLink to="/post/1">Post</NavLink>
           <NavLink to="/submit">Submit</NavLink>
         </div>
 
@@ -117,9 +116,6 @@ class App extends Component {
           <Route path="/profile" render={() => {return (<Profile ref={getInnerRef} userData={this.state.userData} updateUserData={this.updateUserData} setGlobalLocation={this.handleLocation} loggedIn={this.state.loggedIn}><Geolocation setCoords={this.setCoordinates.bind(this)}/></Profile>)}} />
           <Route path="/logout" component={Logout}/>
         </div>
-
-        {this.state.coords && this.state.coords.latitude}
-        {this.state.loggedIn.toString()}
       </div>
      
     </BrowserRouter>

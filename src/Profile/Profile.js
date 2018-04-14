@@ -115,17 +115,14 @@ class Profile extends Component {
 
 		if (!this.props.loggedIn) {
 
-			return (<div className="container"> 
+			return (<div className="container" style={{justifyContent: `center`}}> 
 						<p> You are not logged in </p>
-						<button href="/" onClick={this.handleLogout}>
-      					Logout
-      				</button>
 					</div>);
 		}
-		return (<div className="container">
+		return (<div className="container" style={{justifyContent: `center`, flexWrap: `no-wrap`}}>
 					<p> Welcome! {this.state.profile.username} </p>
-
-
+					<br/>
+					<br/>
 					<div>
 						{this.state.locationSource}
 						<p> Latitude: {this.state.profile.latitude} </p>

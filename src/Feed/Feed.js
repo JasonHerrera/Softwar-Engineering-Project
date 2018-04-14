@@ -44,7 +44,7 @@ class Feed extends Component {
                             <p className="creator"> ~ {post.creator} </p>
                             <br/>
                             <p> {post.longitude} {post.latitude} </p>
-                            <p> {post.updated.toLocaleString()} </p>
+                            <p> {new Date(post.updated).toLocaleString({timezone: 'America/New_York'})} </p>
                         </div>
                     </div>
                 </div>
