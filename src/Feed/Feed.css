@@ -1,21 +1,36 @@
-.Feed {
-    /*border: 1px solid black;
-    background-color: lightblue;
-    padding-top: 50px;
-    padding-right: 30px;
-    padding-bottom: 50px;
-    padding-left: 80px;*/
-
-    margin-top: 1vh;
-    margin-bottom: 1vh;
-    margin-left: 1vw;
-    margin-right: 1vw;
-}
-
 .Feed-Card-Container {
     padding-top: 10px;
     width: 60rem; 
     display: flex; 
-    flex-wrap: wrap; 
-    justify-content: center
+    flex-direction: column;
+}
+
+.card {
+    border-radius: 10px;
+    margin-bottom: 5em;
+}
+
+.card-body {
+    padding: 0;
+    margin: 0;
+
+}
+
+.card-img-top {
+    width: 60%;
+    float: left;
+}
+
+.right {
+    width: 40%;
+    float: right;
+    position: relative;
+    top: 25%;
+}
+
+.card-text {
+    width: 75%;
+    text-align: justify;
+    text-justify: inter-word;
+    margin: auto;
 }

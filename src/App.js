@@ -95,31 +95,31 @@ class App extends Component {
 
   render() {
     const { getInnerRef } = this;
-    return (
+    return (         
     <BrowserRouter>
-     <div className="App">
-      <div className="navbar">
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/profile">Profile</NavLink>
-        <NavLink to="/posts">Feed</NavLink>
-        <NavLink to="/post/1">Post</NavLink>
-        <NavLink to="/submit">Submit</NavLink>
-      </div>
+      <div className="App">
+        <div className="navbar">
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/profile">Profile</NavLink>
+          <NavLink to="/posts">Feed</NavLink>
+          <NavLink to="/post/1">Post</NavLink>
+          <NavLink to="/submit">Submit</NavLink>
+        </div>
 
-      <div>
-        <Route exact path="/" render={() => {return <Login logUserIn={this.handleLogin} loggedIn={this.state.loggedIn}/>}}/>
-        <Route path="/submit" render={() => {return <SubmitPost loggedIn={this.state.loggedIn} userData={this.state.userData} />}}/>
-        <Route path="/post/:id" component={Post}/>
-        <Route path="/posts" component={Feed}/>
-        <Route path="/profile" render={() => {return (<Profile ref={getInnerRef} userData={this.state.userData} updateUserData={this.updateUserData} setGlobalLocation={this.handleLocation} loggedIn={this.state.loggedIn}><Geolocation setCoords={this.setCoordinates.bind(this)}/></Profile>)}} />
-        <Route path="/logout" component={Logout}/>
+        <div>
+          <Route exact path="/" render={() => {return <Login logUserIn={this.handleLogin} loggedIn={this.state.loggedIn}/>}}/>
+          <Route path="/submit" render={() => {return <SubmitPost loggedIn={this.state.loggedIn} userData={this.state.userData} />}}/>
+          <Route path="/post/:id" component={Post}/>
+          <Route path="/posts" component={Feed}/>
+          <Route path="/profile" render={() => {return (<Profile ref={getInnerRef} userData={this.state.userData} updateUserData={this.updateUserData} setGlobalLocation={this.handleLocation} loggedIn={this.state.loggedIn}><Geolocation setCoords={this.setCoordinates.bind(this)}/></Profile>)}} />
+          <Route path="/logout" component={Logout}/>
+        </div>
 
-      </div>
         {this.state.coords && this.state.coords.latitude}
         {this.state.loggedIn.toString()}
-        
       </div>
-      </BrowserRouter>
+     
+    </BrowserRouter>
     );
   }
 

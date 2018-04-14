@@ -35,22 +35,23 @@ class Feed extends Component {
     // TODO: edit this to generate multiple cards within the div
     render() {
         const cards = this.state.posts.map((post) =>
-                <div key={post._id} className="card Feed" style={{width: `18rem`}}>
-                    <Img className="card-img-top" src={post.pictureLink} alt="Card image cap"/>
+                <div key={post._id} className="card Feed">
                     <div className="card-body">
-                        <h3 className="card-title"> {post.title} </h3>
-                        <p className="card-text"> {post.description} </p>
-                        <p> {post.creator} </p>
-                        <p> {post.latitude} </p>
-                        <p> {post.longitude} </p>
-                        <p> {post.updated} </p>
+                        <Img className="card-img-top" src={post.pictureLink} alt="Card image cap"/>
+                        <div className="right">
+                            <h3 className="card-title"> {post.title} </h3>
+                            <p className="card-text"> {post.description} </p>
+                            <p> ~ {post.creator} </p>
+                            <p> {post.latitude} </p>
+                            <p> {post.longitude} </p>
+                            <p> {post.updated} </p>
+                        </div>
                     </div>
                 </div>
             );
 
         // TODO: Change className to card-columns for the Feed Container
         return (<div>
-                    <h1> List of Posts </h1>
                     |{process.env.REACT_APP_ENV}|
                     {(process.env.REACT_APP_ENV === "production").toString()}
                     {baseURL}
