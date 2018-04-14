@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './SubmitPost.css';
 
 const URL = (process.env.REACT_APP_ENV === "production" ? 'https://swe-server.herokuapp.com' : 'http://localhost:5000')
 
@@ -80,15 +81,16 @@ class SubmitPost extends Component {
         return (<div>
                 {this.props.userData && this.props.userData.latitude}
                 {process.env.REACT_APP_ENV}
-                    <p>Submit Post</p>
-                        <form onSubmit={this.handlePostSubmission}>
-                            <input type="text" value={this.state.title} onChange={this.handleChange} name="title" placeholder="Post Title" required=""/>
-                            <input type="text" value={this.state.description} onChange={this.handleChange} name="description" placeholder="Animal Description" required=""/>
-                            <input type="text" value={this.state.pictureLink} onChange={this.handleChange} name="pictureLink" placeholder="Picture Link" required=""/>
-                            <input type="submit" value="SUBMIT"/>
-                        </form>
-                            {this.state.response}
-                
+                    <div className="submitPost">
+                        <p>Submit Post</p>
+                            <form onSubmit={this.handlePostSubmission}>
+                                <input type="text" value={this.state.title} onChange={this.handleChange} name="title" placeholder="Post Title" required=""/>
+                                <input type="text" value={this.state.description} onChange={this.handleChange} name="description" placeholder="Animal Description" required=""/>
+                                <input type="text" value={this.state.pictureLink} onChange={this.handleChange} name="pictureLink" placeholder="Picture Link" required=""/>
+                                <input type="submit" value="SUBMIT"/>
+                            </form>
+                                {this.state.response}
+                    </div>                
                 </div>
         );
     }
